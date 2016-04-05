@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model OpenGraphTags.ModelViews.data
+      
+     
+<html>
+<head>
+
+    <meta property="og:title"  content="@Model.baslik" />
+    <meta property="og:description"  content="@Model.yazi" />
+    <meta property="og:image" content="@Model.resimUrl" />
+    <meta property="og:url" content="@Request.Url.AbsoluteUri.ToString()" />
+
+          @*@helper OpenGraph() {  
+              string appId = "917546058302498"; string secretCode = "c1ed35b8690b807909530ce99f61f664";  }*@
+    
+    
+    <title></title>
+    <link href="~/Content/style1.css" rel="stylesheet" />
+    <script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v2.4&appId=1457461727891018";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    
+    <div class="bilgi">
+        <div class="baslik">
+            @Html.ValueFor(m=>m.baslik)
+        </div>
+        <div class="yazi">
+            @Html.ValueFor(m=>m.yazi)
+        </div>
+        <div class="medyalar">
+
+            <div class="sosyalag">
+                <div class="fb-share-button" data-href="@Request.Url.AbsoluteUri.ToString()" data-layout="button_count"></div>
+
+                @*<a href="http://www.facebook.com/sharer.php?u=http://localhost:49822/">  <img src="~/Content/facebook-icon.jpg" /></a>*@
+                </div>
+
+                <div class="sosyalag">
+                    <img src="~/Content/twittercloud.png" />
+                </div>
+
+                <div class="sosyalag">
+                    <img src="~/Content/instagram-e-ticaret.jpg" />
+                </div>
+
+                <div class="sosyalag">
+                    <img src="~/Content/linkedin-logo..png" />
+                </div>
+
+                <div class="sosyalag">
+                    <img src="~/Content/areklam-google-doubleclick-ad-exchange-turkiye-partneri-oldu-48249.jpg" />
+                </div>
+
+            </div>
+    </div>
+   
+    <div class="resim">
+        <img src="@Model.resimUrl" />
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+@charset "utf-8";
+#icerik {
+	background-color: #A8EBF0;
+	height: auto;
+	width: 1024px;
+}
+.bilgi {
+	float: left;
+	height: 400px;
+	width: 600px;
+	padding-top: 20px;
+	margin-left: 60px;
+}
+.bilgi .baslik {
+	width: 400px;
+	height: 30px;
+	margin-left: 100px;
+}
+.bilgi .yazi {
+	height: 200px;
+	width: 500px;
+	margin-left: 45px;
+	margin-top: 15px;
+}
+.resim {
+	float: left;
+	height: 250px;
+	width: 200px;
+	margin-left: 50px;
+}
+.medyalar {
+	height: 60px;
+	width: 500px;
+	float: none;
+	margin-top: 20px;
+	background-color: #999999;
+}

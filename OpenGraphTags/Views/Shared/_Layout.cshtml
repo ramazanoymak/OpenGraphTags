@@ -1,0 +1,68 @@
+﻿
+@model OpenGraphTags.ModelViews.data
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>                
+        <link href="~/Content/style1.css" rel="stylesheet" />
+        <script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'tr'}
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="footer" > My Wep Project</h1>
+    </header>
+
+        <div class="üstsol">
+           
+        </div>
+
+        @RenderBody()   
+    
+        <div class="medyalar">
+
+            <div class="sosyalag">
+                <div class="fb-share-button" data-href="http://www.tokokinsaat.com/obs/OpenGraph.html" data-layout="button_count"></div>
+            </div>
+
+            <div class="sosyalag">
+              
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.tokokinsaat.com/obs/OpenGraph.html" data-via="ramazanzlkarney" data-lang="tr" data-size="large" data-hashtags="opengraph">Tweet</a>
+                <script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+            </div>
+
+            <div class="sosyalag">
+                <div class="g-plusone" data-href="http://www.tokokinsaat.com/obs/OpenGraph.html"></div>
+            </div>
+
+            <div class="sosyalag">
+                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: tr_TR</script>
+                <script type="IN/Share" data-url="http://www.tokokinsaat.com/obs/OpenGraph.html" data-counter="right">
+                </script>
+            </div>
+
+          
+
+        </div>      
+
+        <footer>
+            <div class="footer">
+               
+
+            </div>
+           
+              
+        </footer>
+       
+</body>
+
+</html>

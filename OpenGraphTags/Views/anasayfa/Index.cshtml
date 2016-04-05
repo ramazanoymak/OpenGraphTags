@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model OpenGraphTags.ModelViews.data
+      
+     
+<html>
+<head>
+
+    <meta property="og:title"  content="@Model.baslik" />
+    <meta property="og:description"  content="@Model.yazi" />
+    <meta property="og:image" content="@Model.resimUrl" />
+    <meta property="og:url" content="@Request.Url.AbsoluteUri.ToString()" />
+
+    <meta property="og:title" content="Open Graph Meta taglarÄ± ile çalÄ±ÅŸma" />
+
+    <meta property="og:description" content="Open Graph Meta Etiketleri kÄ±saca  bizlere sosyal medyada yaptÄ±ÄŸÄ±mÄ±z paylaÅŸÄ±mlarÄ±n sadece bizim gözükmesini istediÄŸimiz kÄ±sÄ±mlarÄ±nÄ±n gösterilmesini saÄŸlar.." />
+
+    <meta property="og:image" content="http://tokokinsaat.com/obs/indir.jpg" />
+
+    <meta property="og:url" content="http://tokokinsaat.com/obs/OpenTags.html" />
+
+    <meta name="twitter:card" content="photo" />
+
+    <meta name="twitter:site" content="isim" />
+
+    <meta name="twitter:title" content="Open Graph Meta taglarÄ± ile çalÄ±ÅŸma" />
+    <meta name="twitter:creator" content="isim" />
+    <meta property="og:url" content="http://tokokinsaat.com/obs/OpenTags.html" />
+
+    <meta name="twitter:image" content="http://tokokinsaat.com/obs/indir.jpg" />
+
+    <meta name="twitter:url" content="http://tokokinsaat.com/obs/OpenTags.html" />
+
+    <meta name="twitter:description" content="Open Graph Meta Etiketleri kÄ±saca  bizlere sosyal medyada yaptÄ±ÄŸÄ±mÄ±z paylaÅŸÄ±mlarÄ±n sadece bizim gözükmesini istediÄŸimiz kÄ±sÄ±mlarÄ±nÄ±n gösterilmesini saÄŸlar..">
+
+    <meta itemprop="name" content="Open Graph Meta tagları ile çalışma">
+    <meta itemprop="description" content="&quot;Open Graph Meta Etiketleri kısaca  bizlere sosyal medyada yaptığımız paylaşımların sadece bizim gözükmesini istediğimiz kısımlarının gösterilmesini sağlar..">
+    <meta itemprop="image" content="http://tokokinsaat.com/obs/indir.jpg">
+
+          @*@helper OpenGraph() {  
+              string appId = "917546058302498"; string secretCode = "c1ed35b8690b807909530ce99f61f664";  }*@   
+    
+    <title></title>
+    <script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v2.4&appId=1457461727891018";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+
+<body>
+ 
+    <div class="bilgi">
+
+
+        <div class="baslik">
+            @Html.ValueFor(m => m.baslik)
+        </div>
+
+        <div class="yazi">
+            @Html.ValueFor(m => m.yazi)
+        </div>
+
+
+    </div>
+
+    <div class="resim">
+        <img src="@Model.resimUrl" />
+    </div>  
+    
+
+</body>
+</html>
